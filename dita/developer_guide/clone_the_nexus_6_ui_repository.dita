@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="clone_the_nexus_6_ui_repository">
+    <title>Clone the nexus-6-ui Repository</title>
+    <body>
+        <p>Open a terminal window in the location you want to clone the repository and run the
+            following command:</p>
+        <pre id="pre_pfy_s3p_jcc">$ git clone https://www-github3.company.com/tyrell/<ph keyref="git_repo_name"/>.git
+</pre>
+        <p><b>Note</b>: If you receive a message instructing you to complete authorization in a
+            browser window, access the browser window, and click the <b>Authorize</b> button to
+            complete the cloning process.</p>
+    </body>
+</topic>

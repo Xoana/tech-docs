@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="activate_venv">
+    <title>Activate the Virtual Environment</title>
+    <body>
+        <ul id="ul_ufn_gkp_jcc">
+            <li>On Windows, run <codeph>$ source &lt;path_to_venv>/<ph keyref="venv_name"
+                    />/Scripts/activate</codeph>.</li>
+            <li>On Mac, run <codeph>$ source &lt;path_to_venv>\<ph keyref="venv_name"
+                    />\bin\activate</codeph>.</li>
+        </ul>
+    </body>
+</topic>

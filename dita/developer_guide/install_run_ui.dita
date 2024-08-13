@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dev_topic_3">
+    <title>Install and Run the UI on localhost</title>
+    <body>
+        <p>To install and run the UI on localhost, complete the procedures described in this
+            topic.</p>
+        <section id="section_vfp_k5p_jcc">
+            <title>Before You Begin</title>
+            <p conref="before_you_begin.dita#before_you_begin/before_you_begin"/>
+        </section>
+        <section id="section_egn_gkp_jcc">
+            <title>Install the UI</title>
+            <p>This procedure installs the <ph keyref="product_name"/> UI application and can take
+                several minutes to complete. </p>
+            <p><b>IMPORTANT!</b> Do not install the UI within a <i>OneDrive</i> folder.</p>
+            <p>To install the UI, complete these steps:</p>
+            <ol id="ol_ggn_gkp_jcc">
+                <li>
+                    <p>If it is not already activated, activate the <codeph>nexus-6-ui-venv</codeph>
+                        virtual environment; for more information about creating a virtual
+                        environment, refer to <xref href="create_a_virtual_environment.dita"/>
+                        <xref
+                            href="https://github.com/Xoana/developer-docs/blob/feature/add-repo-docs/nexus-6-ui/docs/install_and_run_the_ui_locally.md#create-a-virtual-environment"
+                            format="html" scope="external">Create a Virtual Environment</xref>.</p>
+                </li>
+                <li>
+                    <p>Change to the <ph keyref="git_repo_name"/> repository folder on your local
+                        machine, and delete the <b>package-lock.json</b> file.</p>
+                </li>
+                <li>
+                    <p>Open a terminal, and run the following command:</p>
+                    <pre id="pre_jgn_gkp_jcc">$ npm install --legacy-peer-deps
+</pre>
+                </li>
+                <li>
+                    <p>Confirm that the installation was successful by building and serving the UI
+                        as described in <xref
+                            href="https://github.com/Xoana/developer-docs/blob/feature/add-repo-docs/nexus-6-ui/docs/install_and_run_the_ui_locally.md#build-and-serve-the-ui"
+                            format="html" scope="external">Build and Serve the UI</xref>.</p>
+                </li>
+            </ol>
+            <p><b>Note</b>: This procedure must be completed only when the UI is initially installed
+                or when the package.json file changes (which is rare). When the package.json file
+                changes, you must reinstall the UI by deleting the <b>node_modules</b> folder and
+                the <b>package-lock.json</b> file from your local application folder, and running
+                the following command: <codeph>npm install --legacy-peer-deps</codeph></p>
+        </section>
+        <section id="section_rgn_gkp_jcc">
+            <title>Run the UI on localhost</title>
+            <p>To run the UI on localhost, complete these steps:</p>
+            <ol id="ol_sgn_gkp_jcc">
+                <li>
+                    <p>Open a terminal and change to the <ph keyref="git_repo_name"/> repository
+                        folder.</p>
+                </li>
+                <li>
+                    <p>Activate the <codeph><ph keyref="venv_name"/></codeph> virtual environment,
+                        and run one of the following commands (depending on which configuration you
+                        want to run):</p>
+                    <ul id="ul_tgn_gkp_jcc">
+                        <li>
+                            <p>Development: <codeph>ng serve --configuration
+                                development</codeph></p>
+                        </li>
+                        <li>
+                            <p>Stage: <codeph>ng serve --configuration stage</codeph></p>
+                        </li>
+                        <li>
+                            <p>Production: <codeph>ng serve --configuration production</codeph></p>
+                            <p><b>IMPORTANT!</b> When you build the UI using the production
+                                configuration, any changes you make in the UI on localhost will be
+                                saved to the production tables.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>To access the UI locally, open a browser and navigate to <xref
+                            href="http://localhost:4200/" format="html" scope="external"
+                            >http://localhost:4200</xref>.</p>
+                </li>
+            </ol>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="create_a_virtual_environment">
+    <title>Create a Virtual Environment</title>
+    <body>
+        <ol id="ol_rfn_gkp_jcc">
+            <li>
+                <p>Create a python virtual environment:</p>
+                <pre id="pre_sfn_gkp_jcc">$ python -m venv <ph keyref="venv_name"/></pre>
+                <p><b>Note</b>: Do not create the python virtual environment inside a git
+                    repository.</p>
+            </li>
+            <li>
+                <p>Activate the virtual environment:</p>
+                <ul conref="activate_venv.dita#activate_venv/ul_ufn_gkp_jcc" id="ul_wb4_vnp_jcc">
+                    <li/>
+                </ul>
+            </li>
+            <li>
+                <p>Run the following command to install dependencies using the <ph
+                        keyref="requirements_file_name"/> file:</p>
+                <pre id="pre_vfn_gkp_jcc">$ pip install -r &lt;path_to_file>/<ph keyref="requirements_file_name"/>
+</pre>
+            </li>
+            <li>
+                <p>Change to the <ph keyref="venv_name"/> virtual environment folder, and run the
+                    following command to install node.js and attach nodeenv to the python venv:</p>
+                <pre id="pre_xfn_gkp_jcc">$ nodeenv -p --node=16.13.2
+</pre>
+            </li>
+        </ol>
+    </body>
+</topic>

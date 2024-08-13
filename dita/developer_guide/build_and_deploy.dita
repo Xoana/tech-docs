@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dev_topic_4">
+    <title>Build and Deploy the UI</title>
+    <body>
+        <p>The Nexus-6 UI is built and deployed using the <codeph>build-deploy.py</codeph> script
+            located in the <ph keyref="git_repo_name"/> repository.</p>
+        <section id="section_w1m_rpp_jcc">
+            <title>High-Level Script Logic</title>
+            <p>The high-level logic for the <codeph>build-deploy.py</codeph> script is as
+                follows:</p>
+            <ol id="ol_x1m_rpp_jcc">
+                <li>
+                    <p>Verify the user is authenticated; if the user is not authenticated, run the
+                        duo-sso utility.</p>
+                </li>
+                <li>
+                    <p>Run <codeph>git describe</codeph> to retrieve git version number and add it
+                        to the version.ts environment file.</p>
+                    <p><b>Note</b>: The git version is displayed on the UI beneath the pagination
+                        drop-down as follows: <codeph>Application Version: 1.15</codeph></p>
+                </li>
+                <li>
+                    <p>Build the UI based on the specified environment.</p>
+                </li>
+                <li>
+                    <p>Deploy the UI to AWS based on the specified environment.</p>
+                </li>
+            </ol>
+        </section>
+        <section id="section_y1m_rpp_jcc">
+            <title>Before You Begin</title>
+            <p conref="before_you_begin.dita#before_you_begin/before_you_begin"/>
+        </section>
+        <section id="section_abm_rpp_jcc">
+            <title>Running the build-deploy.py Script</title>
+            <p>Complete these steps to deploy the UI to AWS:</p>
+            <ol id="ol_bbm_rpp_jcc">
+                <li>
+                    <p>If it is not already activated, activate the <codeph><ph keyref="venv_name"
+                            /></codeph> virtual environment.</p>
+                </li>
+                <li>
+                    <p>Open a terminal and navigate to the <ph keyref="git_repo_name"/> folder.</p>
+                    <p><b>Note</b>: For UAT and Production releases, the deployment script should be
+                        run from the master branch.</p>
+                </li>
+                <li>
+                    <p>Run the following command with the <codeph>--env</codeph> option to specify
+                        the AWS environment to which the UI should be deployed:</p>
+                    <p><codeph>python build-deploy.py --env
+                        [development|stage|production]</codeph></p>
+                    <p>For example, <codeph>python build-deploy.py --env production</codeph></p>
+                    <p><b>Note</b>: To block users from using the UI during a deployment, use the
+                            <codeph>--block-ui</codeph> option. This option will display a message
+                        on the UI indicating that an update is in progress.</p>
+                </li>
+                <li>
+                    <p>Once the deployment script completes, run the following command to restore
+                        the <codeph>version.ts</codeph> file to the committed version:</p>
+                    <pre id="pre_cbm_rpp_jcc">git restore .\src\environments\version.ts
+</pre>
+                    <p><b>Note</b>: During the build process, the contents of
+                            <codeph>version.ts</codeph> are replaced. Changes to this file should
+                        not be committed to the git repo.</p>
+                </li>
+            </ol>
+        </section>
+        <section id="section_ebm_rpp_jcc">
+            <title>Additional Build Script Options</title>
+            <p>To view additional options, run the following command:</p>
+            <pre id="pre_fbm_rpp_jcc">$ python build-deploy.py --help
+
+Usage: build-deploy.py [OPTIONS]
+
+Options:
+  --duo-sso-path TEXT  Path to the duo_sso application; config.json must be
+                       located in the same folder.  [default: ./duo-sso]
+  --env TEXT           Environment to build: dev, stage, or production.
+                       [default: dev]
+  --block-ui           Flag to block UI access during deployments.					   
+  --skip-auth          Flag to skip authentication.
+  --skip-build         Flag to skip building the UI.
+  --skip-deploy        Flag to skip deploying to AWS.
+  --help               Show this message and exit.</pre>
+        </section>
+    </body>
+</topic>
