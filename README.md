@@ -1,4 +1,5 @@
-# Jana Owens | Senior Technical Writer & Software Developer
+<h1 align="center">Jana Owens<br/>
+Senior Technical Writer & Software Developer</h1>
 
 <p align="center" style="font-style: italic">Simplifying the Complex, One Word at a Time</p>
 
