@@ -31,21 +31,21 @@ For this project, I was responsible for designing, writing, and maintaining docu
 
 ## How Tos
 
-* [How to create a node virtual environment](/docs/create-nodeenv.md)
-* [How to create an Angular project in nodeenv](/docs/angular_in_nodeenv.md)
-* [How to connect to Snowflake in DBeaver](/docs/configure-snowflake-connection-in-dbeaver.pdf) (pdf)
-* [How to create a demo customer dashboard](/docs/create-tableau-demo-dashboard.pdf) (pdf)
-* [How to create a key-based connection to a shared virtual machine](/docs/create-key-based-connection.pdf) (pdf)
-* [How to share a bearer token across multiple requests in Postman](/docs/sharing-bearer-token-across-multiple-requests.pdf) (pdf)
+* [How to create a node virtual environment](/devops-docs/create-nodeenv.md)
+* [How to create an Angular project in nodeenv](/devops-docs/angular_in_nodeenv.md)
+* [How to connect to Snowflake in DBeaver](/devops-docs/configure-snowflake-connection-in-dbeaver.pdf) (pdf)
+* [How to create a demo customer dashboard](/devops-docs/create-tableau-demo-dashboard.pdf) (pdf)
+* [How to create a key-based connection to a shared virtual machine](/devops-docs/create-key-based-connection.pdf) (pdf)
+* [How to share a bearer token across multiple requests in Postman](/devops-docs/sharing-bearer-token-across-multiple-requests.pdf) (pdf)
 
 ## Documentation Lifecycle Management
 
 * [API Reference Content Specification](./miscellaneous/api-reference-content-specification.pdf) (pdf)
 * [Getting Started Content Specification](./miscellaneous/getting-started-content-specification.pdf) (pdf)
-* [SDK Content Specification](./miscellaneous/sdk-content-specification.pdf)
+* [SDK Content Specification](./miscellaneous/sdk-content-specification.pdf) (pdf)
 * [SDK Technical Documentation Plan](./miscellaneous/information-plan.pdf) (pdf)
-* [Technical Publications Test Plan](./miscellaneous/technical-publications-test-plan.pdf)
-* [Test Plan Review Form Phase 1: Validation](./miscellaneous/test-plan-review-form-phase-1.pdf)
+* [Technical Publications Test Plan](./miscellaneous/technical-publications-test-plan.pdf) (pdf)
+* [Test Plan Review Form Phase 1: Validation](./miscellaneous/test-plan-review-form-phase-1.pdf) (pdf)
 
 ## Additional Resources
 * [www.janaowens.com](https://www.janaowens.com)
