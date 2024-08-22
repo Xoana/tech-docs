@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dev_workspace_requirements">
+    <title>Software Requirements</title>
+    <body>
+        <p>To contribute to this codebase, you must install the following software: </p>
+        <ul id="ul_lqw_ncy_hcc">
+            <li><xref href="https://www.python.org/downloads/" format="html" scope="external"
+                    >Python</xref> (> v3.8.8)</li>
+            <li><xref href="https://nodejs.org/en/" format="html" scope="external">Node.js</xref>
+                (v16.13.2)</li>
+            <li><xref href="https://angular.io/guide/setup-local#install-the-angular-cli"
+                    format="html" scope="external">Angular CLI</xref> (v13.3.10)</li>
+            <li><xref href="https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html"
+                    format="html" scope="external">AWS CLI</xref> (v2.2.0) (Required for the
+                deployment script.)</li>
+            <li><xref href="https://github.com/git-guides/install-git" format="html"
+                    scope="external">Git</xref> &amp; <xref
+                    href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow"
+                    format="html" scope="external">Gitflow</xref></li>
+            <li><xref href="https://www.sourcetreeapp.com/" format="html" scope="external"
+                    >SourceTree Git Client</xref> (Recommended but not required.)</li>
+        </ul>
+    </body>
+</topic>

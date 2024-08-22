@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dev_topic_5">
+    <title>Release the <ph keyref="product_name"/> UI</title>
+    <body>
+        <bodydiv>
+            <p>This topic describes how to deploy the Nexus-6 UI to AWS; these procedures are to be
+                completed by the <ph keyref="product_name"/> Development team only.</p>
+            <section id="section_dxj_zsp_jcc">
+                <title>Before You Begin</title>
+                <p conref="before_you_begin.dita#before_you_begin/before_you_begin"/>
+            </section>
+            <section id="section_zxl_p5p_jcc">
+                <title>Prepare the Release</title>
+                <ol id="ol_exj_zsp_jcc">
+                    <li>Use gitflow to start and finish a release branch (specifying the appropriate
+                        release number as the tag).</li>
+                    <li>Push changes to develop and master branches.</li>
+                    <li>Add release notes to the GitHub tag.</li>
+                </ol>
+            </section>
+            <section id="section_fxj_zsp_jcc">
+                <title>Deploy the UI</title>
+                <p>Complete the following steps to deploy the <ph keyref="product_name"/> UI:</p>
+                <ol id="ol_gxj_zsp_jcc">
+                    <li>
+                        <p>Within your local <codeph><ph keyref="git_repo_name"/> repo</codeph>,
+                            check out the <codeph>master</codeph> branch.</p>
+                    </li>
+                    <li>
+                        <p>Activate the <codeph><ph keyref="venv_name"/></codeph> virtual
+                                environment:<ul
+                                conref="activate_venv.dita#activate_venv/ul_ufn_gkp_jcc"
+                                id="ul_e1n_ltp_jcc">
+                                <li/>
+                            </ul></p>
+                    </li>
+                    <li>
+                        <p>Run the <codeph>build-deploy.py</codeph> script:</p>
+                        <ul id="ul_hxj_zsp_jcc">
+                            <li>
+                                <p>For the UAT release, run the following command:</p>
+                                <p><codeph>python build-deploy.py --configuration stage</codeph></p>
+                            </li>
+                            <li>
+                                <p>For the production release, run the following command:</p>
+                                <p><codeph>python build-deploy.py --configuration
+                                        production</codeph></p>
+                                <p><b>Note:</b> You can block the UI to prevent users from using the
+                                        <ph keyref="product_name"/> UI while database changes are
+                                    being made; to block the UI, run the following command with the
+                                        <codeph>--block-ui</codeph> CLI option.</p>
+                                <p><codeph>python build-deploy.py --configuration production
+                                        --block-ui</codeph></p>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>For more information about deploying the UI, refer to <xref
+                        href="build_and_deploy.dita"/> .</p>
+            </section>
+        </bodydiv>
+    </body>
+</topic>

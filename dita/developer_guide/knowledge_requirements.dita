@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dev_knowledge_requirements">
+    <title>Knowledge Requirements</title>
+    <body>
+        <p></p>
+        <ul id="ul_kgs_jcy_hcc">
+            <li><xref href="https://angular.io/" format="html" scope="external">Angular</xref></li>
+            <li><ph keyref="product_name"/> UI Kit</li>
+            <li><xref href="https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud"
+                    format="html" scope="external">Git</xref> &amp; <xref
+                    href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow"
+                    format="html" scope="external">Gitflow</xref></li>
+            <li><xref
+                    href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"
+                    format="html" scope="external">HTML</xref>/<xref
+                    href="https://developer.mozilla.org/en-US/docs/Learn/CSS" format="html"
+                    scope="external">CSS</xref></li>
+            <li><xref href="https://www.javascript.com/" format="html" scope="external"
+                    >Javascript</xref>/<xref href="https://www.typescriptlang.org/" format="html"
+                    scope="external">Typescript</xref></li>
+            <li><ph keyref="product_name"/> API</li>
+        </ul>
+    </body>
+</topic>

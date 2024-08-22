@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="install_duo_sso">
+    <title>Install duo-sso</title>
+    <body>
+        <p>To install duo-sso on Windows, complete these steps:</p>
+        <ol id="ol_rvs_cqp_jcc">
+            <li>
+                <p>Create a folder in the <ph keyref="git_repo_name"/> folder named
+                    <i>duo-sso</i>.</p>
+            </li>
+            <li>
+                <p>In the duo-sso folder, create a new file named <i>config.json</i>, and paste the
+                    following code:</p>
+                <pre id="pre_svs_cqp_jcc">{
+	"url": "https://cloudsso.<ph keyref="company_name_short_lower"/>.com",
+	"preferred_factor": "push",
+	"partner_spid": "https://signin.aws.amazon.com/saml",
+	"aws_urn": "https://signin.aws.amazon.com/saml",
+	"session_duration_seconds": 900,
+	"profiles": {
+		"default": {
+		"aws_account_id": 123456789123,
+		"aws_role_name": "AWS-<ph keyref="product_abbr_upper"/>-Cloud-Admin",
+		"session_duration_seconds": 900
+		},    
+		"stage": {
+		"aws_account_id": 123456789123,
+		"aws_role_name": "admin",
+		"session_duration_seconds": 900
+		},
+		"production": {
+		"aws_account_id": 123456789123,
+		"aws_role_name": "admin",
+		"session_duration_seconds": 900
+		}    
+	}
+}
+</pre>
+            </li>
+            <li>
+                <p>Change the <codeph>aws_account_id</codeph> values for each environment to the
+                    appropriate ID.</p>
+                <p>Contact a member of the development team for the appropriate account IDs for the
+                    UI.</p>
+                <p><b>Note</b>: You can also view these values on the AWS environment: Log into the
+                    AWS Management Console, and click the drop-down arrow next to your email
+                    address. The values are listed in the drop-down as follows:</p>
+                <ul id="ul_uvs_cqp_jcc">
+                    <li>Federated Login: <codeph>aws_role_name</codeph>/<xref
+                            href="mailto:username@company.com" format="html" scope="external"
+                            >username@company.com</xref></li>
+                    <li>My Account: <codeph>aws_account_id</codeph></li>
+                </ul>
+            </li>
+            <li>
+                <p>Download the duo-sso utility and save it to the duo-sso folder.</p>
+            </li>
+        </ol>
+    </body>
+</topic>

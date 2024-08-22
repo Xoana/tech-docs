@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dev_overview">
+    <title>Overview</title>
+    <body>
+        <p>The <ph keyref="product_name"/> UI is built using Angular and Node.js and is hosted on
+            the folowing AWS environments using S3 and Cloudfront:<ul id="ul_hhc_4fp_jcc">
+                <li>Development</li>
+                <li>Stage</li>
+                <li>Production</li>
+            </ul></p>
+    </body>
+</topic>

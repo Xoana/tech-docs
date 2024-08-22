@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dev_source_code_components">
+    <title>Source Code Components</title>
+    <body>
+        <p>The following table lists the UI components and the page or function to which the code
+            applies.</p>
+        <table frame="all" rowsep="1" colsep="1" id="table_ety_qcy_hcc">
+            <tgroup cols="2">
+                <colspec colnum="1" colname="col1" colwidth="1*"/>
+                <colspec colnum="2" colname="col2" colwidth="2.19*"/>
+                <thead>
+                    <row>
+                        <entry>Component</entry>
+                        <entry>Function/Page</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <codeblock id="codeblock_tnk_tcy_hcc">activity-log</codeblock>
+                        </entry>
+                        <entry>Activity Log</entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <codeblock id="codeblock_aqg_vcy_hcc">auth</codeblock>
+                        </entry>
+                        <entry>Log In/Authentication</entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <codeblock id="codeblock_flr_vcy_hcc">create-request</codeblock>
+                        </entry>
+                        <entry>Create Requests</entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <codeblock id="codeblock_uzw_vcy_hcc">header</codeblock>
+                        </entry>
+                        <entry>Header</entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <codeblock id="codeblock_uqc_wcy_hcc">modal</codeblock>
+                        </entry>
+                        <entry>Modal</entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <codeblock id="codeblock_zwj_wcy_hcc">page-not-found</codeblock>
+                        </entry>
+                        <entry>Page Not Found</entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <codeblock id="codeblock_k5y_wcy_hcc">services</codeblock>
+                        </entry>
+                        <entry>Services used throughout the codebase.</entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <codeblock id="codeblock_fld_xcy_hcc">shared</codeblock>
+                        </entry>
+                        <entry>Code shared by more than one component.</entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <codeblock id="codeblock_rsj_xcy_hcc">spreadsheet-view</codeblock>
+                        </entry>
+                        <entry>Requests table.<b>Note</b>: The spreadsheet-view also includes
+                            subcomponents for services, modals, and custom code used on the requests
+                            table.</entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <codeblock id="codeblock_rfp_xcy_hcc">subscriptions</codeblock>
+                        </entry>
+                        <entry>Subscriptions page.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

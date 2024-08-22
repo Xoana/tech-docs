@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dev_before_you_begin">
+    <title>Prerequisites</title>
+    <body>
+        <p>Before contributing to this codebase, review the following topics:</p>
+        <ul id="ul_kpb_nby_hcc">
+            <li><xref href="knowledge_requirements.dita">Knowledge Requirements</xref></li>
+            <li><xref href="software_requirements.dita">Software Requirements</xref></li>
+            <li><xref href="source_code_components.dita">Source Code Components</xref></li>
+        </ul>
+    </body>
+</topic>

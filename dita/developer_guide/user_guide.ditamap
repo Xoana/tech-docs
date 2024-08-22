@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Nexus-6 Developer's Guide</title>
+    <topicref href="overview.dita">
+        <topicref href="prerequisites.dita"/>
+        <topicref href="knowledge_requirements.dita"/>
+        <topicref href="software_requirements.dita"/>
+        <topicref href="source_code_components.dita"/>
+    </topicref>
+    <topicref href="set_up_env.dita" navtitle="Set Up Your Local Development Environment"/>
+    <topicref href="install_run_ui.dita"/>
+    <topicref href="build_and_deploy.dita"/>
+    <topicref href="release_process.dita"/>
+    <keydef keys="product_name">
+        <topicmeta>
+            <keywords>
+                <keyword>Nexus-6</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="company_short_name">
+        <topicmeta>
+            <keywords>
+                <keyword>Tyrell</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="requirements_file_name">
+        <topicmeta>
+            <keywords>
+                <keyword>nexus-6-ui-venv-requirements.txt</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="venv_name">
+        <topicmeta>
+            <keywords>
+                <keyword>nexus-6-ui-venv</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>   
+    <keydef keys="git_repo_name">
+        <topicmeta>
+            <keywords>
+                <keyword>nexus-6-ui</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>     
+    <keydef keys="product_abbr_upper">
+        <topicmeta>
+            <keywords>
+                <keyword>NXS6</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>   
+    <keydef keys="company_name_short_lower">
+        <topicmeta>
+            <keywords>
+                <keyword>tyrell</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>  
+</map>

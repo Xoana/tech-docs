@@ -1,0 +1,186 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="26.1">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="To install duo-sso on Windows, complete these steps: Create a folder in the nexus-6-ui folder named duo-sso . In the duo-sso folder, create a new file named config.json , and paste the following code: ..."/><meta name="DC.rights.owner" content="(C) Copyright 2024"/><meta name="copyright" content="(C) Copyright 2024"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="install_duo_sso"/><title>Install duo-sso</title><!--  Generated with Oxygen version 26.1, build number 2024072909.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="install_duo_sso.dita"/><meta name="wh-out-relpath" content="install_duo_sso.html"/>
+
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/commons.css?buildId=2024072909"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2024072909"/>
+
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20240813152728"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2024072909"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20240813152728"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/commons.js?buildId=2024072909"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2024072909"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/green.css?buildId=2024072909"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2024072909"/></head>
+
+    <body id="install_duo_sso" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="http://www.janaowens.com" class=" wh_logo d-none d-sm-block "><img src="logo.png" alt="Nexus-6 Developer's Guide"/></a>
+                    <div class=" wh_publication_title "><a href="index.html"><span class="title">Nexus-6 Developer's Guide</span></a></div>
+                    
+                </div>
+                
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="dev_overview-d238e11-mi" data-tocid="dev_overview-d238e11" data-state="not-ready" class=" topicref " data-id="dev_overview"><span class="title"><a href="overview.html">Overview</a></span></span></li><li role="menuitem"><span id="dev_topic_2-d238e52-mi" data-tocid="dev_topic_2-d238e52" data-state="leaf" class=" topicref " data-id="dev_topic_2"><span class="title"><a href="set_up_env.html"><strong class="ph b">Set Up Your Local Environment</strong></a></span></span></li><li role="menuitem"><span id="dev_topic_3-d238e62-mi" data-tocid="dev_topic_3-d238e62" data-state="leaf" class=" topicref " data-id="dev_topic_3"><span class="title"><a href="install_run_ui.html">Install and Run the UI on localhost</a></span></span></li><li role="menuitem"><span id="dev_topic_4-d238e71-mi" data-tocid="dev_topic_4-d238e71" data-state="leaf" class=" topicref " data-id="dev_topic_4"><span class="title"><a href="build_and_deploy.html">Build and Deploy the UI</a></span></span></li><li role="menuitem"><span id="dev_topic_5-d238e81-mi" data-tocid="dev_topic_5-d238e81" data-state="leaf" class=" topicref " data-id="dev_topic_5"><span class="title"><a href="release_process.html">Release the <span class="ph">Nexus-6</span> UI</a></span></span></li></ul></nav>
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-12" id="wh_topic_body">
+                        
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic topic" role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Install duo-sso</h1>
+    <div class="- topic/body body">
+        <p class="- topic/p p">To install duo-sso on Windows, complete these steps:</p>
+        <ol class="- topic/ol ol" id="install_duo_sso__ol_rvs_cqp_jcc" data-ofbid="install_duo_sso__ol_rvs_cqp_jcc">
+            <li class="- topic/li li">
+                <p class="- topic/p p">Create a folder in the <span class="- topic/ph ph">nexus-6-ui</span> folder named
+                    <em class="+ topic/ph hi-d/i ph i">duo-sso</em>.</p>
+            </li>
+            <li class="- topic/li li">
+                <p class="- topic/p p">In the duo-sso folder, create a new file named <em class="+ topic/ph hi-d/i ph i">config.json</em>, and paste the
+                    following code:</p>
+                <pre class="- topic/pre pre" id="install_duo_sso__pre_svs_cqp_jcc" data-ofbid="install_duo_sso__pre_svs_cqp_jcc">{
+	"url": "https://cloudsso.<span class="- topic/ph ph">tyrell</span>.com",
+	"preferred_factor": "push",
+	"partner_spid": "https://signin.aws.amazon.com/saml",
+	"aws_urn": "https://signin.aws.amazon.com/saml",
+	"session_duration_seconds": 900,
+	"profiles": {
+		"default": {
+		"aws_account_id": 123456789123,
+		"aws_role_name": "AWS-<span class="- topic/ph ph">NXS6</span>-Cloud-Admin",
+		"session_duration_seconds": 900
+		},    
+		"stage": {
+		"aws_account_id": 123456789123,
+		"aws_role_name": "admin",
+		"session_duration_seconds": 900
+		},
+		"production": {
+		"aws_account_id": 123456789123,
+		"aws_role_name": "admin",
+		"session_duration_seconds": 900
+		}    
+	}
+}
+</pre>
+            </li>
+            <li class="- topic/li li">
+                <p class="- topic/p p">Change the <code class="+ topic/ph pr-d/codeph ph codeph">aws_account_id</code> values for each environment to the
+                    appropriate ID.</p>
+                <p class="- topic/p p">Contact a member of the development team for the appropriate account IDs for the
+                    UI.</p>
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Note</strong>: You can also view these values on the AWS environment: Log into the
+                    AWS Management Console, and click the drop-down arrow next to your email
+                    address. The values are listed in the drop-down as follows:</p>
+                <ul class="- topic/ul ul" id="install_duo_sso__ul_uvs_cqp_jcc" data-ofbid="install_duo_sso__ul_uvs_cqp_jcc">
+                    <li class="- topic/li li">Federated Login: <code class="+ topic/ph pr-d/codeph ph codeph">aws_role_name</code>/<a class="- topic/xref xref" href="mailto:username@company.com" target="_blank" rel="external noopener">username@company.com</a></li>
+                    <li class="- topic/li li">My Account: <code class="+ topic/ph pr-d/codeph ph codeph">aws_account_id</code></li>
+                </ul>
+            </li>
+            <li class="- topic/li li">
+                <p class="- topic/p p">Download the duo-sso utility and save it to the duo-sso folder.</p>
+            </li>
+        </ol>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank" rel="noopener">&lt;oXygen/&gt; XML WebHelp</a> - Evaluation Version
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+   <appContext helpID="dev_overview" path="overview.html"/>
+   <appContext helpID="dev_before_you_begin" path="prerequisites.html"/>
+   <appContext helpID="dev_knowledge_requirements" path="knowledge_requirements.html"/>
+   <appContext helpID="dev_workspace_requirements" path="software_requirements.html"/>
+   <appContext helpID="dev_source_code_components" path="source_code_components.html"/>
+   <appContext helpID="dev_topic_2" path="set_up_env.html"/>
+   <appContext helpID="dev_topic_3" path="install_run_ui.html"/>
+   <appContext helpID="dev_topic_4" path="build_and_deploy.html"/>
+   <appContext helpID="dev_topic_5" path="release_process.html"/>
+</map>
