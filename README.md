@@ -29,7 +29,6 @@ For this project, I was responsible for designing, writing, and maintaining docu
 * [Nexus-6 UI](./nexus-6-ui/README.md): Documentation from a GitHub repository the included source code for developing and publishing an Angular application; content has been modified to remove proprietary information.
 * [Nexus-6 Developer's Guide](https://xoana.github.io/index.html): Sample Developer's Guide created using DITA and Oxygen; content has been modified to remove proprietary information.
 
-
 ## How Tos
 
 * [How to create a node virtual environment](/docs/create-nodeenv.md)
@@ -39,6 +38,14 @@ For this project, I was responsible for designing, writing, and maintaining docu
 * [How to create a key-based connection to a shared virtual machine](/docs/create-key-based-connection.pdf) (pdf)
 * [How to share a bearer token across multiple requests in Postman](/docs/sharing-bearer-token-across-multiple-requests.pdf) (pdf)
 
+## Documentation Lifecycle Management
+
+* [API Reference Content Specification](./miscellaneous/api-reference-content-specification.pdf) (pdf)
+* [Getting Started Content Specification](./miscellaneous/getting-started-content-specification.pdf) (pdf)
+* [SDK Content Specification](./miscellaneous/sdk-content-specification.pdf)
+* [SDK Technical Documentation Plan](./miscellaneous/information-plan.pdf) (pdf)
+* [Technical Publications Test Plan](./miscellaneous/technical-publications-test-plan.pdf)
+* [Test Plan Review Form Phase 1: Validation](./miscellaneous/test-plan-review-form-phase-1.pdf)
 
 ## Additional Resources
 * [www.janaowens.com](https://www.janaowens.com)
