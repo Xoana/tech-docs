@@ -35,7 +35,7 @@ The ```publish_templates.py``` script located in the publish folder of this repo
 
 During a development cycle in which new columns are added to a template, it is necessary to manually update the SQL queries in the template to point to the prefixed views (e.g., `DEV_PRODUCTX_*`).
 
-To update the SQL queries in the templates, extract the files from the twbx file as described in [Nexus-6 Dashboard](./productx_dashboard.md), open the XML file in a text editor, and search/replace the following text:
+To update the SQL queries in the templates, extract the files from the twbx file as described in [Nexus-6 Dashboard](./nexus6_dashboard.md), open the XML file in a text editor, and search/replace the following text:
 
 * Search: ```DB.PRODUCTX_BR.NEXUS6```
 * Replace: ```DB.PRODUCTX_BR.DEV_PRODUCTX```
@@ -56,7 +56,7 @@ Once changes are complete, you must search/replace to revert the text:
 
 ### Is it necessary to run requests manually?
 
-No. With the introduction of [Nexus-6 Automation](./productx_automation.md), manual runs are no longer necessary and are discouraged as running the ETL process manually can conflict with the normal automation process.
+No. With the introduction of [Nexus-6 Automation](./nexus-6_automation.md), manual runs are no longer necessary and are discouraged as running the ETL process manually can conflict with the normal automation process.
 
 If a request needs to be rerun, the status can be set to ```Open```, and the request will be added to the automation queue. As with any request, make sure the appropriate fields (i.e., Customer Identifier and associated ID field) are populated when requeuing a request.
 
@@ -66,7 +66,7 @@ If a request needs to be rerun, the status can be set to ```Open```, and the req
 
 ### How are requests validated during automation?
 
-For details regarding the validation process, refer to the [High-Level Logic](./productx_automation.md/#high-level-logic) section of the [Validation](./productx_automation.md/#validation-productx_validatorpy) topic.
+For details regarding the validation process, refer to the [High-Level Logic](./nexus-6_automation.md/#high-level-logic) section of the [Validation](./nexus-6_automation.md/#validation-productx_validatorpy) topic.
 
 ### How do I check the automation queue?
 
@@ -101,7 +101,7 @@ The automation scripts should be run manually **only** during development or use
 
 ### How many requests are processed during the automation process?
 
-* During the validation phase, all requests where ```status``` is Open or NULL are extracted from the Nexus-6 and added to the automation queue (depending on validation results). For more information about the validation process, refer to the [Validation](./productx_automation.md/#validation-productx_validatorpy) topic.
+* During the validation phase, all requests where ```status``` is Open or NULL are extracted from the Nexus-6 and added to the automation queue (depending on validation results). For more information about the validation process, refer to the [Validation](./nexus-6_automation.md/#validation-productx_validatorpy) topic.
 * During the preprocessing phase, a maxium of five (5) requests are extracted from the Nexus-6 queue (```PRODUCTX_UI_DETAILS_QUEUE```) and processed every ten (10) minutes.
 
 ### Why is the preprocessor script limited to processing 5 requests at a time?
