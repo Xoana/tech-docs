@@ -2,24 +2,11 @@
 
 ## Overview
 
-The Nexus-6 3.0 dashboard provides data insights into customer networks and is accessed using a single URL. A run ID must be specified in order to view data for a specific run. 
-
-The dashboard URLs use the following convention:
-
-```
-https://tableau.company.com/#/views/{workbook_name}/home?run_id={run_id}&iframeSizedToWindow=true&%3Aembed=y&%3AshowAppBanner=false&%3Adisplay_count=no&%3AshowVizHome=no&%3Atabs=no&%3Aorigin=viz_share_link&%3Atoolbar=no#1
-```
-Where:
-
-* ```run_id``` is the run ID.
-* ```workbook_name``` is one of the following:
-    * DEV_productx
-    * UAT_productx
-    * productx
+The Nexus-6 3.0 dashboard provides data insights into customer networks and is accessed using a single URL. 
 
 ## Modifying the Template
 
-The Nexus-6 3.0 dashboard is generated using the `productx_3.0_templates.twbx` file (located in the *templates* folder).
+The Nexus-6 3.0 dashboard is generated using the `nexus_template.twbx` file (located in the *templates* folder).
 
 **Important Note!** Changes cannot be made to Tableau templates in two different branches at the same time (because there is no way to merge changes within a .twbx file).
 

@@ -48,8 +48,6 @@ Set up your local development environment as described in [Set Up Your Local Dev
 
 ## Install the UI
 
-### Typical Installation
-
 This procedure installs all the Angular packages used in the UI application and can take several minutes to complete.
 
 **<span style="color:red">IMPORTANT!</span>** Do not install the UI within your *OneDrive* folder.
@@ -78,29 +76,6 @@ To install the UI, complete these steps:
 * This procedure must be completed only when the UI is initially installed or when the package.json file changes (which is rare). When the package.json file changes, you must reinstall the UI; to reinstall the UI, delete the **node_modules** folder and the **package-lock.json** file from your local application folder, and run the following command: ```npm 
 install --legacy-peer-deps```
 * If the installation process fails because it cannot locate the *productx-ng* package (or the *npm.productx.com* registry), refer to the [Alternate Installation](#alternate-installation) for alternate installation instructions. 
-
-### Alternate Installation
-
-This procedure installs the UI without the *productx-ng* package; it should be used only when a typical installation fails to install the *productx-ng* package.
-
-Once you have confirmed that the UI will not install using the typical installation method, complete these steps:
-
-1. Delete the following items:
-	* **package.json** file
-	* **package-lock.json** file
-	* **node_modules** folder
-1. Rename **package_alt.json** to **package.json**.
-1. Open a terminal, and run the following command: 
-
-	```
-	npm install --legacy-peer-deps
-	```
-
-1. Once the installation process completes, extract the **@productx-ng.zip** into the *node_modules* folder.
-    
-    **Note**: The resulting folder hierarchy must be as follows: `node_modules > @company > productx-ng`
-
-1. Confirm that the installation was successful by building and serving the UI as described in [Build and Serve the UI](#build-and-serve-the-ui).
 
 ## Build and Serve the UI
 

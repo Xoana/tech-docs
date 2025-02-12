@@ -16,8 +16,8 @@ The high-level logic for this script is as follows:
 
 ## Before You Begin
 
-1. Set up your local development environment as described in [Set Up Your Local Development Environment](../README.md#set-up-your-local-development-environment).
-1. Install duo-sso as described in [Install duo-sso](./install-duo-sso.md).
+Set up your local development environment as described in [Set Up Your Local Development Environment](../README.md#set-up-your-local-development-environment).
+
 
 ## Running the build-deploy.py Script
 
