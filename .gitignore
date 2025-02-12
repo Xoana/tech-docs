@@ -12,3 +12,5 @@
 *.vsix
 
 do-not-commit/
+
+sphinx/docs/build/*

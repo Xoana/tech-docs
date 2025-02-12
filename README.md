@@ -23,8 +23,10 @@ For this project, I was responsible for designing, writing, and maintaining docu
 * [Service Order Return (RMA)](https://developer.cisco.com/docs/support-apis/service-order-return-rma)
 * [Software Suggestion](https://developer.cisco.com/docs/support-apis/software-suggestion)
 
-## Developer Documentation
+## SDK & Developer Documentation
 
+* [Getting Started](./sdk/tyrell_gettingstarted.pdf): Content has been modified to remove proprietary information.
+* [Developer's Guide](./sdk/tyrell_developersguide.pdf): Content has been modified to remove proprietary information.
 * [Nexus-6 Dashboard](./nexus-6-dashboard/README.md): Documentation from a GitHub repository that included source code for publishing Tableau dashboards; content has been modified to remove proprietary information.
 * [Nexus-6 UI](./nexus-6-ui/README.md): Documentation from a GitHub repository the included source code for developing and publishing an Angular application; content has been modified to remove proprietary information.
 * [Nexus-6 Developer's Guide](https://xoana.github.io/index.html): Sample Developer's Guide created using DITA and Oxygen; content has been modified to remove proprietary information.

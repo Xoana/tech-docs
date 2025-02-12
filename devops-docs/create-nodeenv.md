@@ -2,15 +2,10 @@
 
 This procedure describes how to create an isolated Node.js virtual environment.
 
-
 ## Prerequisites
 
 * Python
-* Git Bash or Windows Command Prompt
-    
-    **Note**: This procedure uses Git Bash for Windows.
-
-* Knowledge of Linux-based commands or equivalent commands for Windows operating system.
+* Knowledge of Linux-based CLI commands
 
 ## Procedure
 
@@ -29,10 +24,8 @@ This procedure describes how to create an isolated Node.js virtual environment.
     Where `<venv_name>` is the name of the virtual environment.
 
 1. Run the following command to activate the python virtual environment:
-
-    ```
-    $ source <path_to_venv>/Scripts/activate
-    ```
+    * Mac: ```$ source <path_to_venv>/bin/activate```
+    * Windows: ```$ source <path_to_venv>/Scripts/activate```
 
 1. Run the following command to upgrade pip:
 
@@ -60,7 +53,12 @@ This procedure describes how to create an isolated Node.js virtual environment.
 
     Where `node_version` is the version of node.js that you want to install.
 
-    **Note**: If `mklink` is not installed on your machine or you are using a Linux-based terminal (such as Git Bash), you might receive the following error:
+    **Notes**: 
+    - If you are working on a Mac and you receive the ```CERTIFICATE_VERIFY_FAILED``` error, you must run the Install Certificates command: 
+    
+    `/Applications/Python\ 3.13/Install\ Certificates.command`
+     
+    - If `mklink` is not installed on your machine or you are using a Linux-based terminal (such as Git Bash), you might receive the following error:
 
     `Error: Failed to create nodejs.exe link`
 

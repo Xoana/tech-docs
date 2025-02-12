@@ -3,7 +3,7 @@
 The `publish_templates.py` script is used to publishing templates to the Tableau production server; this script supports the following templates to the Tableau production server:
 
 * productx_3.0_template.twbx
-* productx_compare_template.twbx
+* nexus6_compare_template.twbx
 * productx_snowflake_costs_template.twbx
 
 In addition, the script provides the following flags to validate items in the Nexus-6 3.0 template (`productx_3.0_template.twbx`):
@@ -48,7 +48,7 @@ To run the Nexus-6 3.0 template validator script, use this command (for example)
 
 ```
 1: productx_3.0_template.twbx
-2: productx_compare_template.twbx
+2: nexus6_compare_template.twbx
 3: productx_snowflake_costs_template.twbx
 4: All
 5: Exit

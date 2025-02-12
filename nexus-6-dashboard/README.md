@@ -1,6 +1,6 @@
-# Nexus-6 2.0 Dashboard Processing
+# Nexus-6 Dashboard Processing
 
-This repository provides the functionality necessary to generate and publish the Nexus-6 2.0 live dashboards, as well as generate individual Nexus-6 dashboard files (.twbx files) for partner runs.
+This repository provides the functionality necessary to generate and publish the Nexus-6 dashboards.
 
 **Topics**
 * [Overview](#overview)
@@ -18,8 +18,8 @@ This repository provides the functionality necessary to generate and publish the
 ## Overview
 
 Nexus-6 provides the following dashboards:
-* **Nexus-6**: The Nexus-6 dashboard provides insights into customer and partner networks; for details, refer to [Nexus-6 Dashboard](./docs/productx_dashboard.md).
-* **Nexus-6 Compare**: The Nexus-6 Compare dashboard allows users to compare data points across multiple runs for the same customer; for more information, refer to [Nexus-6 Compare Dashboard](./docs/productx_compare.md).
+* **Nexus-6**: The Nexus-6 dashboard provides insights into customer and partner networks; for details, refer to [Nexus-6 Dashboard](./docs/nexus6_dashboard.md).
+* **Nexus-6 Compare**: The Nexus-6 Compare dashboard allows users to compare data points across multiple runs for the same customer; for more information, refer to [Nexus-6 Compare Dashboard](./docs/nexus6_compare.md).
 
 The Nexus-6 dashboards are built using Tableau Desktop and published to the Tableau production server using live connections to Snowflake views. 
 
@@ -41,7 +41,7 @@ Nexus-6 3.0 introduces a single-access dashboard that combines the classic Nexus
 
 **Note**: All workspace requirements are local unless otherwise specified.
 
-* productx_dashboard (git repo)
+* nexus6_dashboard (git repo)
 * Snowflake Cloud Gateway Account (External Workspace)
     
     For information about how to set up your cloud gateway environment, refer to the Nexus-6 Snowflake Development Guide (Box document).
@@ -105,8 +105,8 @@ For each change you want to make to this codebase, complete the following steps:
     
     **<span style="color:red">IMPORTANT!</span>** Refer to the following topics before making any changes to the templates:
 
-    * [Nexus-6 Dashboard](./docs/productx_dashboard.md)
-    * [Nexus-6 Compare Dashboard](./docs/productx_compare.md)
+    * [Nexus-6 Dashboard](./docs/nexus6_dashboard.md)
+    * [Nexus-6 Compare Dashboard](./docs/nexus6_compare.md)
 
 1. Verify your changes; to verify your changes, complete the following steps:
 
@@ -192,9 +192,9 @@ Complete the following steps to deploy Nexus-6 dashboard changes:
 
 
 ## Additional Topics
-* [Nexus-6 Automation](./docs/productx_automation.md)
-* [Nexus-6 Compare Dashboard](./docs/productx_compare.md)
-* [Nexus-6 Dashboard](./docs/productx_dashboard.md)
+* [Nexus-6 Automation](./docs/nexus-6_automation.md)
+* [Nexus-6 Compare Dashboard](./docs/nexus6_compare.md)
+* [Nexus-6 Dashboard](./docs/nexus6_dashboard.md)
 * [Frequently Asked Questions](./docs/frequently-asked-questions.md)
 * [Publishing Templates](./docs/publish_templates.md)
 * [Troubleshooting](./docs/troubleshooting.md)
