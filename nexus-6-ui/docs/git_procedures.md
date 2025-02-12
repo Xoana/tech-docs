@@ -95,7 +95,7 @@ To commit and push changes to your remote feature branch, complete these steps:
 
 ## Submit a Pull Request
 
-1. Go to the [productx-ui](https://www-github3.company.com/cxe/productx-ui) repo in a browser and locate your branch.
+1. Go to the `productx-ui` repo in a browser and locate your branch.
 
 1. Click the **Compare and pull request** button.
 

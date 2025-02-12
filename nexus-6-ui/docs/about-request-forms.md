@@ -2,7 +2,7 @@
 
 ## Overview
 
-The request forms, including the Create Request landing page, are built as a single page using Nexus-6 UI Angular components. The HTML code for the landing page and all request forms is located in the create-request.component.html file. Form fields on the request forms are displayed or hidden using Angular directives (e.g. ```*ngIf```).
+The request forms, including the Create Request landing page, are built as a single page using Nexus-6 UI Angular components. Form fields on the request forms are displayed or hidden using Angular directives (e.g. ```*ngIf```).
 
 ## Knowledge Requirements
 

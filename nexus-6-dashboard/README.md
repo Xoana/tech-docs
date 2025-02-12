@@ -43,8 +43,6 @@ Nexus-6 3.0 introduces a single-access dashboard that combines the classic Nexus
 
 * nexus6_dashboard (git repo)
 * Snowflake Cloud Gateway Account (External Workspace)
-    
-    For information about how to set up your cloud gateway environment, refer to the Nexus-6 Snowflake Development Guide (Box document).
 
 * [Tableau Desktop](https://www.tableau.com/support/releases)
 
@@ -64,7 +62,7 @@ The source code for this repo is contained in the src folder; the src folder inc
 |dependencies| Code shared across multiple scripts. |
 |docs| Additional documentation. |
 |jobs| Automation scripts run on Ctrl-M jobs. |
-|publish| Script to publish the live dashboards. |
+|scripts| Script to publish the live dashboards. |
 |templates| Tableau template (twbx) files. |
 |tools| Additional scripts used in installation and development. |
 
@@ -102,11 +100,6 @@ For each change you want to make to this codebase, complete the following steps:
     ```
 
 1. Make your changes. 
-    
-    **<span style="color:red">IMPORTANT!</span>** Refer to the following topics before making any changes to the templates:
-
-    * [Nexus-6 Dashboard](./docs/nexus6_dashboard.md)
-    * [Nexus-6 Compare Dashboard](./docs/nexus6_compare.md)
 
 1. Verify your changes; to verify your changes, complete the following steps:
 
@@ -182,11 +175,11 @@ Complete the following steps to deploy Nexus-6 dashboard changes:
 
         * For the UAT release, run the following command: 
         
-            `python publish_templates.py --template-to-publish {template_name.twbx} --env stage --table-prefix UAT_`
+            `python publish_templates.py --template {template_name.twbx} --env stage --table-prefix UAT_`
         
         * For the production release, run the following command: 
         
-            `python publish_templates.py --template-to-publish {template_name.twbx} --env production`
+            `python publish_templates.py --template {template_name.twbx} --env production`
         
         For more information about running the publishing script, refer to [Publishing Templates](./docs/publish_templates.md).
 
@@ -195,6 +188,4 @@ Complete the following steps to deploy Nexus-6 dashboard changes:
 * [Nexus-6 Automation](./docs/nexus-6_automation.md)
 * [Nexus-6 Compare Dashboard](./docs/nexus6_compare.md)
 * [Nexus-6 Dashboard](./docs/nexus6_dashboard.md)
-* [Frequently Asked Questions](./docs/frequently-asked-questions.md)
 * [Publishing Templates](./docs/publish_templates.md)
-* [Troubleshooting](./docs/troubleshooting.md)

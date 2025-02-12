@@ -23,7 +23,7 @@ Complete the following steps for each change you want to make to this codebase:
     For example:
 
     ```
-    $ git flow feature start CRW-1234-update-template
+    $ git flow feature start NXS-1234-update-template
     ```
 	
 1. Make your changes.
