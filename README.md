@@ -10,7 +10,14 @@ Whether you need comprehensive documentation, technical training materials, or c
 
 Explore my portfolio to see how my skills and experience can help you achieve your goals.
 
-## Cisco Support API References
+## SDK & API Documentation
+
+### SDK Documentation
+
+* [Getting Started](./sdk/tyrell_gettingstarted.pdf): Content has been modified to remove proprietary information.
+* [Developer's Guide](./sdk/tyrell_developersguide.pdf): Content has been modified to remove proprietary information.
+
+### Cisco Support API References
 
 For this project, I was responsible for designing, writing, and maintaining documentation for the Cisco Support APIs. Leveraging Software Requirements Specifications (SRS), I developed detailed API guides that provided both internal and external developers with the necessary information to effectively utilize the Cisco Support APIs. My work involved closely collaborating with development teams to ensure that the documentation was accurate, up-to-date, and aligned with the latest software releases. The resulting documentation played a crucial role in improving the developer experience and enhancing the overall usability of the Cisco Support APIs.
 
@@ -23,15 +30,16 @@ For this project, I was responsible for designing, writing, and maintaining docu
 * [Service Order Return (RMA)](https://developer.cisco.com/docs/support-apis/service-order-return-rma)
 * [Software Suggestion](https://developer.cisco.com/docs/support-apis/software-suggestion)
 
-## SDK & Developer Documentation
+## Developer Documentation
 
-* [Getting Started](./sdk/tyrell_gettingstarted.pdf): Content has been modified to remove proprietary information.
-* [Developer's Guide](./sdk/tyrell_developersguide.pdf): Content has been modified to remove proprietary information.
+### Developer Guides
 * [Nexus-6 Dashboard](./nexus-6-dashboard/README.md): Documentation from a GitHub repository that included source code for publishing Tableau dashboards; content has been modified to remove proprietary information.
 * [Nexus-6 UI](./nexus-6-ui/README.md): Documentation from a GitHub repository the included source code for developing and publishing an Angular application; content has been modified to remove proprietary information.
 * [Nexus-6 Developer's Guide](https://xoana.github.io/index.html): Sample Developer's Guide created using DITA and Oxygen; content has been modified to remove proprietary information.
+* [Doxygen Template (.h)](./devops-docs/ddi_template.h.pdf): Doxygen template for C header files.
+* [Doxygen Template (.c)](./devops-docs/ddi_template.c.pdf): Doxygen template for C source code.
 
-## How Tos
+### How Tos
 
 * [How to create a node virtual environment](/devops-docs/create-nodeenv.md)
 * [How to create an Angular project in nodeenv](/devops-docs/angular_in_nodeenv.md)

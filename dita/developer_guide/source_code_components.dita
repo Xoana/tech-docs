@@ -18,9 +18,9 @@
                 <tbody>
                     <row>
                         <entry>
-                            <codeblock id="codeblock_tnk_tcy_hcc">activity-log</codeblock>
+                            <codeblock id="codeblock_tnk_tcy_hcc">activity</codeblock>
                         </entry>
-                        <entry>Activity Log</entry>
+                        <entry>Activity history.</entry>
                     </row>
                     <row>
                         <entry>
@@ -66,9 +66,9 @@
                     </row>
                     <row>
                         <entry>
-                            <codeblock id="codeblock_rsj_xcy_hcc">spreadsheet-view</codeblock>
+                            <codeblock id="codeblock_rsj_xcy_hcc">requests</codeblock>
                         </entry>
-                        <entry>Requests table.<b>Note</b>: The spreadsheet-view also includes
+                        <entry>Requests table.<b>Note</b>: requests also includes
                             subcomponents for services, modals, and custom code used on the requests
                             table.</entry>
                     </row>
