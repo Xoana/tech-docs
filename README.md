@@ -36,8 +36,6 @@ For this project, I was responsible for designing, writing, and maintaining docu
 * [Nexus-6 Dashboard](./nexus-6-dashboard/README.md): Documentation from a GitHub repository that included source code for publishing Tableau dashboards; content has been modified to remove proprietary information.
 * [Nexus-6 UI](./nexus-6-ui/README.md): Documentation from a GitHub repository the included source code for developing and publishing an Angular application; content has been modified to remove proprietary information.
 * [Nexus-6 Developer's Guide](https://xoana.github.io/index.html): Sample Developer's Guide created using DITA and Oxygen; content has been modified to remove proprietary information.
-* [Doxygen Template (.h)](./devops-docs/ddi_template.h.pdf): Doxygen template for C header files.
-* [Doxygen Template (.c)](./devops-docs/ddi_template.c.pdf): Doxygen template for C source code.
 
 ### How Tos
 
@@ -47,6 +45,11 @@ For this project, I was responsible for designing, writing, and maintaining docu
 * [How to create a demo customer dashboard](/devops-docs/create-tableau-demo-dashboard.pdf) (pdf)
 * [How to create a key-based connection to a shared virtual machine](/devops-docs/create-key-based-connection.pdf) (pdf)
 * [How to share a bearer token across multiple requests in Postman](/devops-docs/sharing-bearer-token-across-multiple-requests.pdf) (pdf)
+
+### Source Code Templates
+
+* [Doxygen Template (.h)](./devops-docs/ddi_template.h.pdf): Doxygen template for C header files.
+* [Doxygen Template (.c)](./devops-docs/ddi_template.c.pdf): Doxygen template for C source code.
 
 ## Documentation Lifecycle Management
 
