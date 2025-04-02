@@ -1,0 +1,394 @@
+openapi: 3.0.0
+info:
+  title: Online Quiz API
+  description: |
+    The Online Quiz API allows users to create and manage quizzes. 
+    
+    This API provides the following functionalitys:
+    
+    * Get a list of all available quizzes.
+    * Create a new quiz.
+    * Get details of a specific quiz.
+    * Delete a quiz.
+    * Add questions to an existing quiz.
+    * Submit answers to a quiz.
+    * Retrieve a score for a completed quiz.
+    
+    **Note**: This API is for sample documentation purposes only and is not an active API.
+    
+  version: 1.0.0
+  contact:
+    name: Jana Owens
+    url: https://janaowens.com
+    email: jana@janaowens.com
+
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/JANA_1/janaowens_sample_api/1.0.0
+  - url: https://api.yourwebsite.com/v1
+    description: Production server
+  - url: https://staging-api.yourwebsite.com/v1
+    description: Staging server
+
+paths:
+  /quizzes:
+    get:
+      summary: Returns a list of available quizzes.
+      responses:
+        "200":
+          description: OK
+          content: 
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuizArray"
+        "400":
+          $ref: "#/components/responses/ResponseCode400"
+        "401":
+          $ref: "#/components/responses/ResponseCode401"
+        "404":
+          $ref: "#/components/responses/ResponseCode404"
+        "429":
+          $ref: "#/components/responses/ResponseCode429"
+        "500":
+          $ref: "#/components/responses/ResponseCode500"
+    post:
+      summary: Creates a new quiz.
+      description: |
+        To create a new quiz, complete these steps:
+        1. Create the quiz using this endpoint (`POST /quizzes`).
+        2. Extract the quiz ID from the POST response.
+        3. Using the quiz ID, add questions to the quiz using the `POST /quizzes/{id}/questions` endpoint.
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuizCreate"
+      responses:
+        "200":
+          description: OK
+          content: 
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/QuizSummary"
+
+        "400":
+          $ref: "#/components/responses/ResponseCode400"
+        "401":
+          $ref: "#/components/responses/ResponseCode401"
+        "404":
+          $ref: "#/components/responses/ResponseCode404"
+        "429":
+          $ref: "#/components/responses/ResponseCode429"
+        "500":
+          $ref: "#/components/responses/ResponseCode500"
+
+  /quizzes/{id}:
+    get:
+      summary: Returns details of the specified quiz.
+      parameters:
+        - $ref: "#/components/parameters/ParamQuizId"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuizDetails"
+        "400":
+          $ref: "#/components/responses/ResponseCode400"
+        "401":
+          $ref: "#/components/responses/ResponseCode401"
+        "404":
+          $ref: "#/components/responses/ResponseCode404"
+        "429":
+          $ref: "#/components/responses/ResponseCode429"
+        "500":
+          $ref: "#/components/responses/ResponseCode500"
+
+    delete:
+      summary: Deletes the specified quiz.
+      parameters:
+        - $ref: "#/components/parameters/ParamQuizId"
+      responses:
+        "200":
+          description: OK
+          content: 
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuizSummary"
+        "400":
+          $ref: "#/components/responses/ResponseCode400"
+        "401":
+          $ref: "#/components/responses/ResponseCode401"
+        "404":
+          $ref: "#/components/responses/ResponseCode404"
+        "429":
+          $ref: "#/components/responses/ResponseCode429"
+        "500":
+          $ref: "#/components/responses/ResponseCode500"
+
+  /quizzes/{id}/questions:
+    post:
+      summary: Adds a question to the specified quiz.
+      parameters:
+        - $ref: "#/components/parameters/ParamQuizId"
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuestionObject"
+      responses:
+        "200":
+          description: OK
+          content: 
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuestionDetails"
+        "400":
+          $ref: "#/components/responses/ResponseCode400"
+        "401":
+          $ref: "#/components/responses/ResponseCode401"
+        "404":
+          $ref: "#/components/responses/ResponseCode404"
+        "429":
+          $ref: "#/components/responses/ResponseCode429"
+        "500":
+          $ref: "#/components/responses/ResponseCode500"
+
+  /quizzes/{id}/submit:
+    post:
+      summary: Submits the specified quiz and calculates a score.
+      parameters:
+        - $ref: "#/components/parameters/ParamQuizId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuizSubmit"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuizResult"
+        "400":
+          $ref: "#/components/responses/ResponseCode400"
+        "401":
+          $ref: "#/components/responses/ResponseCode401"
+        "404":
+          $ref: "#/components/responses/ResponseCode404"
+        "429":
+          $ref: "#/components/responses/ResponseCode429"
+        "500":
+          $ref: "#/components/responses/ResponseCode500"
+
+components:
+  schemas:
+
+    Answer:
+      type: object
+      properties:
+        questionId:
+          type: string
+          description: Identifier for the question.
+          example: 546431
+        selectedAnswer:
+          type: string
+          description: Answer selected by the user.
+          example: A
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+        - code
+        - message  
+
+    QuestionDetails:
+      type: object
+      properties:
+        questionId:
+          $ref: "#/components/schemas/QuestionId"
+        questionDetails:
+          $ref: "#/components/schemas/QuestionObject"
+
+    QuestionId:
+      type: integer
+      description: Identifier for the question.
+      example: 4564621
+
+    QuestionObject:
+      type: object
+      required:
+        - text
+        - choices
+      properties:
+        text:
+          $ref: "#/components/schemas/QuestionText"
+        choices:
+          type: array
+          items:
+            $ref: "#/components/schemas/UserSelection"
+        correctAnswer:
+          type: string
+          description: Correct answer to the question.
+          example: A
+     
+    QuestionText:
+      type: string
+      description: Text for the question.
+      example: How many independent states are there in the USA? 
+
+    QuizArray:
+      type: array
+      items:
+        properties:
+          id:
+            $ref: "#/components/schemas/QuizId"
+          title:
+            $ref: "#/components/schemas/QuizTitle"
+          description:
+            $ref: "#/components/schemas/QuizDescription"
+
+    QuizCreate:
+      type: object
+      required:
+        - title
+        - description
+      properties:
+        title:
+          $ref: "#/components/schemas/QuizTitle"
+        description:
+          $ref: "#/components/schemas/QuizDescription"
+           
+    QuizDetails:
+      type: object
+      properties:
+        id:
+          $ref: "#/components/parameters/ParamQuizId"
+        title:
+            $ref: "#/components/schemas/QuizTitle"
+        description:
+          $ref: "#/components/schemas/QuizDescription"
+        questions:
+          $ref: "#/components/schemas/QuizQuestions"
+
+    QuizDescription: 
+      type: string
+      description: Description of the quiz.
+      example: One hundred (100) questions regarding the history of the United States.
+
+    QuizId: 
+      type: string
+      description: Identifier of the quiz.
+      example: 123456
+
+    QuizQuestions: 
+      type: array
+      items:
+        $ref: "#/components/schemas/QuestionDetails"
+
+    QuizResult:
+      type: object
+      properties:
+        score:
+          type: integer
+          description: Score for the submitted quiz.
+          example: 85
+        results:
+          type: array
+          items:
+            allOf:
+              - $ref: "#/components/schemas/Answer"
+              - $ref: "#/components/schemas/QuestionObject"
+
+    QuizSubmit:
+      type: object
+      required:
+        - answers
+      properties:
+        answers:
+          type: array
+          items:
+            $ref: "#/components/schemas/Answer"
+
+    QuizSummary:
+      type: object
+      properties:
+        id:
+          $ref: "#/components/parameters/ParamQuizId"
+        title:
+            $ref: "#/components/schemas/QuizTitle"
+        description:
+          $ref: "#/components/schemas/QuizDescription"
+
+    QuizTitle:
+      type: string
+      description: Title of the quiz.
+      example: U.S. History Quiz
+
+    UserSelection:
+      type: object
+      properties:
+        choiceId:
+          type: string
+          description: Identifier of the answer the user selected.
+          example: A
+        text:
+          type: string
+          example: 50
+
+  responses:
+    ResponseCode400:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"      
+    ResponseCode401:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"      
+    ResponseCode404:
+      description: Not Found  
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"      
+    ResponseCode429:
+      description: Too Many Requests
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"      
+    ResponseCode500:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"      
+
+  parameters:
+    ParamQuizId:
+      name: id
+      description: Unique identifier for the quiz.
+      example: 123456
+      in: path
+      required: true
+      schema:
+        type: integer

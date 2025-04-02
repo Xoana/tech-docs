@@ -14,3 +14,5 @@
 do-not-commit/
 
 sphinx/docs/build/*
+
+swagger-docs/swagger-ui/node_modules
