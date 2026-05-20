@@ -6,10 +6,6 @@ Senior Technical Writer & Software Engineer</h1>
 ## About Me
 With over 20 years' experience in technical communications and 5 years' experience in software development, I specialize in transforming complex concepts into clear and concise documentation. My expertise spans SDK and API documentation, developer guides, end-user manuals, and more.
 
-Whether you need comprehensive documentation, technical training materials, or content that bridges the gap between development and user understanding, I am here to deliver high-quality, precise solutions that meet your needs.
-
-Explore my portfolio to see how my skills and experience can help you achieve your goals.
-
 ## SDK & API Documentation
 
 ### SDK Documentation
